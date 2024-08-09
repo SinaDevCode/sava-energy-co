@@ -10,6 +10,7 @@ export default {
       light: "#f0f1f3",
       blue: "#2d325a",
       cyan: "#1ebdb8",
+      lightCyan: "rgb(219, 237, 236)",
       gold: "#dbb13b",
       gray: "#505050",
       black: "#000000",
