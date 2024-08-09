@@ -15,6 +15,7 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
+import styled from "styled-components";
 
 import PDF1 from "../../../db/docs/sealand/Kwick Seal (F,M,C)/SE-KSF-030508112.pdf";
 import PDF2 from "../../../db/docs/sealand/Kwick Seal (F,M,C)/SE-KSM-03050811.pdf";
@@ -264,6 +265,12 @@ const menuContent = [
   },
 ];
 
+const StyledTableRow = styled(TableRow)(() => ({
+  "&:nth-of-type(odd)": {
+    backgroundColor: "rgb(219, 237, 236)",
+  },
+}));
+
 function createData(id, batchNo, date, file) {
   return { id, batchNo, date, file };
 }
@@ -298,17 +305,19 @@ export default function SealandKwickSeal() {
             },
             components: {
               Menu: {
-                itemSelectedColor: "rgba(30, 189, 184, 1)",
-                itemColor: "#808080",
-                itemDisabledColor: "red",
-                itemHoverBg: "rgba(30, 189, 184, 0.2)",
-                itemSelectedBg: "rgba(30, 189, 184, 0.2)",
+                itemColor: "Black",
+                itemDisabledColor: "rgba(80, 80, 80, 0.5)",
+                itemHoverBg: "rgb(219, 237, 236)",
+                itemHoverColor: "#505050",
+                itemSelectedBg: "rgb(219, 237, 236)",
+                itemSelectedColor: "#000",
+                subMenuItemBg: "rgba(219, 237, 236, 0.7)",
               },
             },
           }}
         >
           <Menu
-            className="min-w-64 max-w-64 h-screen overflow-auto "
+            className="min-w-64 max-w-64 h-screen overflow-auto bg-cyan"
             mode="inline"
             items={menuContent}
             theme="light"
@@ -332,7 +341,7 @@ export default function SealandKwickSeal() {
             </TableHead>
             <TableBody>
               {rows.map((row) => (
-                <TableRow
+                <StyledTableRow
                   key={row.id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
@@ -342,7 +351,7 @@ export default function SealandKwickSeal() {
                   <TableCell>{row.batchNo}</TableCell>
                   <TableCell>{row.date}</TableCell>
                   <TableCell>{row.file}</TableCell>
-                </TableRow>
+                </StyledTableRow>
               ))}
             </TableBody>
           </Table>

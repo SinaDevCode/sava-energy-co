@@ -9,6 +9,14 @@ import SealandKwickSeal from "../pages/panels/Sealand/SealandKwickSeal";
 //----- Mi panel -----
 import MiDashboard from "../pages/panels/Mi/MiDashboard";
 import MiStarchLv from "../pages/panels/Mi/MiStarchLv";
+//----- Dana panel -----
+import DanaDashboard from "../pages/panels/Dana/DanaDashboard";
+import DanaCmc from "../pages/panels/Dana/DanaCmc";
+import DanaLime from "../pages/panels/Dana/DanaLime";
+import DanaPolyanionicCellulose from "../pages/panels/Dana/DanaPolyanionicCellulose";
+import DanaSodaAsh from "../pages/panels/Dana/DanaSodaAsh";
+import DanaStarchHt from "../pages/panels/Dana/DanaStarchHt";
+import DanaStarchLv from "../pages/panels/Dana/DanaStarchLv";
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -23,6 +31,14 @@ const routes = [
   //----- Mi panel -----
   { path: "/mi", element: <MiDashboard /> },
   { path: "/mi/starchLv", element: <MiStarchLv /> },
+  //----- Dana panel -----
+  { path: "/dana", element: <DanaDashboard /> },
+  { path: "/dana/cmc", element: <DanaCmc /> },
+  { path: "/dana/lime", element: <DanaLime /> },
+  { path: "/dana/polyanionicCellulose", element: <DanaPolyanionicCellulose /> },
+  { path: "/dana/sodaAsh", element: <DanaSodaAsh /> },
+  { path: "/dana/starchLv", element: <DanaStarchLv /> },
+  { path: "/dana/starchHt", element: <DanaStarchHt /> },
 
   // ----- NotFound -----
   { path: "/*", element: <h1>Not Found</h1> },

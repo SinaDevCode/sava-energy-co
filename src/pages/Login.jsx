@@ -91,7 +91,8 @@ export default function Login() {
           onClick={() => {
             let result = accounts.find(
               (arr) =>
-                arr.username === userValue && arr.password === passwordValue
+                arr.username === userValue.toLowerCase() &&
+                arr.password === passwordValue.toLowerCase()
             );
             {
               result

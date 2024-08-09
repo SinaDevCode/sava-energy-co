@@ -15,6 +15,7 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
+import styled from "styled-components";
 
 import PDF1 from "../../../db/docs/sealand/Xanthan Gum/SE-XG-3231214028.pdf";
 
@@ -49,34 +50,42 @@ const menuContent = [
           {
             key: "sub1Item1",
             label: "Barite 4.1 SG",
+            disabled: true,
           },
           {
             key: "sub1Item2",
             label: "Barite 4.2 SG",
+            disabled: true,
           },
           {
             key: "sub1Item3",
             label: "Bentonite",
+            disabled: true,
           },
           {
             key: "sub1Item4",
             label: "CaCl2",
+            disabled: true,
           },
           {
             key: "sub1Item5",
             label: "Hematite",
+            disabled: true,
           },
           {
             key: "sub1Item6",
             label: "KCl",
+            disabled: true,
           },
           {
             key: "sub1Item7",
             label: "Limestone",
+            disabled: true,
           },
           {
             key: "sub1Item8",
             label: "Salt (Sodium Chloride)",
+            disabled: true,
           },
         ],
       },
@@ -87,34 +96,42 @@ const menuContent = [
           {
             key: "sub2Item1",
             label: "CMC H.V",
+            disabled: true,
           },
           {
             key: "sub2Item2",
             label: "CMC L.V",
+            disabled: true,
           },
           {
             key: "sub2Item3",
             label: "HT FLC",
+            disabled: true,
           },
           {
             key: "sub2Item4",
             label: "Pac L.V",
+            disabled: true,
           },
           {
             key: "sub2Item5",
             label: "Pac R",
+            disabled: true,
           },
           {
             key: "sub2Item6",
             label: "PHPA",
+            disabled: true,
           },
           {
             key: "sub2Item7",
             label: "Starch H.V",
+            disabled: true,
           },
           {
             key: "sub2Item8",
             label: "Starch L.V",
+            disabled: true,
           },
           {
             key: "sub2Item9",
@@ -129,10 +146,12 @@ const menuContent = [
           {
             key: "sub3Item1",
             label: "Bio Cide",
+            disabled: true,
           },
           {
             key: "sub3Item2",
             label: "Corrosion Inhibitor",
+            disabled: true,
           },
           {
             key: "sub3Item3",
@@ -141,18 +160,22 @@ const menuContent = [
           {
             key: "sub3Item4",
             label: "Defomer",
+            disabled: true,
           },
           {
             key: "sub3Item5",
             label: "Drilling Detergent",
+            disabled: true,
           },
           {
             key: "sub3Item6",
             label: "Glycol MC",
+            disabled: true,
           },
           {
             key: "sub3Item7",
             label: "H2S Scavenger Liquid",
+            disabled: true,
           },
           {
             key: "sub3Item8",
@@ -161,14 +184,17 @@ const menuContent = [
           {
             key: "sub3Item9",
             label: "Pipe Lax W",
+            disabled: true,
           },
           {
             key: "sub3Item10",
             label: "Temperature Stabilizer",
+            disabled: true,
           },
           {
             key: "sub3Item11",
             label: "Water Based Mud Liquid Lubricant",
+            disabled: true,
           },
         ],
       },
@@ -179,34 +205,43 @@ const menuContent = [
           {
             key: "sub4Item1",
             label: "Caustic Soda",
+            disabled: true,
           },
           {
             key: "sub4Item2",
             label: "Citric ACID",
+            disabled: true,
           },
           {
             key: "sub4Item3",
             label: "H2S Scav.(Zinc Carbonate)",
+            disabled: true,
           },
           {
             key: "sub4Item4",
             label: "H2S Scav.(Zinc Oxide)",
+            disabled: true,
           },
+
           {
             key: "sub4Item5",
             label: "Lime",
+            disabled: true,
           },
           {
             key: "sub4Item6",
             label: "Potassium hydroxide",
+            disabled: true,
           },
           {
             key: "sub4Item7",
             label: "Soda Ash",
+            disabled: true,
           },
           {
             key: "sub4Item8",
             label: "Sodium Bicarbonate",
+            disabled: true,
           },
         ],
       },
@@ -217,6 +252,7 @@ const menuContent = [
           {
             key: "sub5Item1",
             label: "CaCo3 (F,M,C)",
+            disabled: true,
           },
           {
             key: "sub5Item2",
@@ -227,14 +263,17 @@ const menuContent = [
           {
             key: "sub5Item3",
             label: "Mica (F,M,C)",
+            disabled: true,
           },
           {
             key: "sub5Item4",
             label: "Oyster-Shall (F,M,C)",
+            disabled: true,
           },
           {
             key: "sub5Item5",
             label: "Walnut Shell",
+            disabled: true,
           },
         ],
       },
@@ -263,6 +302,12 @@ const menuContent = [
   },
 ];
 
+const StyledTableRow = styled(TableRow)(() => ({
+  "&:nth-of-type(odd)": {
+    backgroundColor: "rgb(219, 237, 236)",
+  },
+}));
+
 function createData(id, batchNo, date, file) {
   return { id, batchNo, date, file };
 }
@@ -289,17 +334,19 @@ export default function SealandXanthanGum() {
             },
             components: {
               Menu: {
-                itemSelectedColor: "rgba(30, 189, 184, 1)",
-                itemColor: "#808080",
-                itemDisabledColor: "red",
-                itemHoverBg: "rgba(30, 189, 184, 0.2)",
-                itemSelectedBg: "rgba(30, 189, 184, 0.2)",
+                itemColor: "Black",
+                itemDisabledColor: "rgba(80, 80, 80, 0.5)",
+                itemHoverBg: "rgb(219, 237, 236)",
+                itemHoverColor: "#505050",
+                itemSelectedBg: "rgb(219, 237, 236)",
+                itemSelectedColor: "#000",
+                subMenuItemBg: "rgba(219, 237, 236, 0.7)",
               },
             },
           }}
         >
           <Menu
-            className="min-w-64 max-w-64 h-screen overflow-auto "
+            className="min-w-64 max-w-64 h-screen overflow-auto bg-cyan"
             mode="inline"
             items={menuContent}
             theme="light"
@@ -323,7 +370,7 @@ export default function SealandXanthanGum() {
             </TableHead>
             <TableBody>
               {rows.map((row) => (
-                <TableRow
+                <StyledTableRow
                   key={row.id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
@@ -333,7 +380,7 @@ export default function SealandXanthanGum() {
                   <TableCell>{row.batchNo}</TableCell>
                   <TableCell>{row.date}</TableCell>
                   <TableCell>{row.file}</TableCell>
-                </TableRow>
+                </StyledTableRow>
               ))}
             </TableBody>
           </Table>

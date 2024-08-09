@@ -17,20 +17,8 @@ import {
 } from "@mui/material";
 import styled from "styled-components";
 
-import PDF1 from "../../../db/docs/mi/Starch Lv/BN-SS-F-02-SAVA QC report Starch Lv 30 Nov 2021.pdf";
-import PDF2 from "../../../db/docs/mi/Starch Lv/BN-SS-F-13-SAVA QC report Starch Lv 22 May 2022-NISOC.pdf";
-import PDF3 from "../../../db/docs/mi/Starch Lv/BN-SS-F-13-SAVA QC report Starch Lv 23 June 2022-NISOC.pdf";
-import PDF4 from "../../../db/docs/mi/Starch Lv/BN-SS-F-14-SAVA QC report Starch Lv 24 May 2022-API.pdf";
-import PDF5 from "../../../db/docs/mi/Starch Lv/BN-SS-F-14-SAVA QC report Starch Lv 25 June 2022-API.pdf";
-import PDF6 from "../../../db/docs/mi/Starch Lv/BN-SS-F-15-SAVA QC report Starch Lv 25 June 2022-NISOC.pdf";
-import PDF7 from "../../../db/docs/mi/Starch Lv/BN-SS-F-17-SAVA QC report Starch Lv 16 Dec 2022-NISOC.pdf";
-import PDF8 from "../../../db/docs/mi/Starch Lv/BN-SS-F-21-SAVA QC report Starch Lv 30 Jan 2023-API.pdf";
-import PDF9 from "../../../db/docs/mi/Starch Lv/BN-SS-F-25-SAVA QC report Starch Lv 17 June 2023-NISOC.pdf";
-import PDF10 from "../../../db/docs/mi/Starch Lv/BN-SS-F-27-SAVA QC report Starch Lv 9 Aug 2023-NISOC.pdf";
-import PDF11 from "../../../db/docs/mi/Starch Lv/BN-SS-F-28-SAVA QC report Starch Lv-API-02 Sep 2023.pdf";
-import PDF12 from "../../../db/docs/mi/Starch Lv/BN-SS-F-46-SAVA QC report Starch Lv-API-29 July 2024.pdf";
-import PDF13 from "../../../db/docs/mi/Starch Lv/BN-SS-F-42-SAVA QC report Starch LV-NISOC-06 Aug 2024.pdf";
-
+import PDF1 from "../../../db/docs/dana/Soda Ash/SO-SA-13-SAVA QC report Soda Ash-25 Apr 2024.pdf";
+import PDF2 from "../../../db/docs/dana/Soda Ash/SO-SA-14020826-SAVA QC report Soda Ash-20 Nov 2023.pdf";
 
 const menuContent = [
   {
@@ -39,7 +27,7 @@ const menuContent = [
     children: [
       {
         key: "buttonGroup1Item1",
-        label: <NavLink to="/mi">Dashboard</NavLink>,
+        label: <NavLink to="/dana">Dashboard</NavLink>,
         icon: <BiSolidDashboard />,
       },
       // Devloper Note: add More links in this place
@@ -55,32 +43,31 @@ const menuContent = [
     children: [
       {
         key: "menu1item1",
-        label: "CMC",
-        disabled: true,
+        label: <NavLink to="/dana/cmc">CMC</NavLink>,
       },
       {
         key: "menu1item2",
-        label: "Lime",
-        disabled: true,
+        label: <NavLink to="/dana/lime">Lime</NavLink>,
       },
       {
         key: "menu1item3",
-        label: "Polyanionic Cellulose",
-        disabled: true,
+        label: (
+          <NavLink to="/dana/polyanionicCellulose">
+            Polyanionic Cellulose
+          </NavLink>
+        ),
       },
       {
         key: "menu1item4",
-        label: "Soda Ash",
-        disabled: true,
+        label: <NavLink to="/dana/sodaAsh">Soda Ash</NavLink>,
       },
       {
         key: "menu1item5",
-        label: <NavLink to="/mi/starchLv">Starch LV</NavLink>,
+        label: <NavLink to="/dana/starchLv">Starch LV</NavLink>,
       },
       {
         key: "menu1item6",
-        label: "Starch HT",
-        disabled: true,
+        label: <NavLink to="/dana/starchHt">Starch HT</NavLink>,
       },
       {
         key: "menu1item7",
@@ -125,111 +112,23 @@ function createData(id, batchNo, date, file) {
 const rows = [
   createData(
     1,
-    "SS-F-02-SAVA-API",
-    "Nov 30, 2021",
+    "SO-SA-13-SAVA",
+    "Apr 25, 2024",
     <a href={PDF1}>
       <FaFilePdf style={{ fontSize: 24 }} />
     </a>
   ),
   createData(
     2,
-    "SS-F-13-SAVA-NISOC",
-    "May 22, 2022",
+    "SO-SA-14020826-SAVA",
+    "Nov 23, 2023",
     <a href={PDF2}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    3,
-    "SS-F-13-NISOC",
-    "June 23, 2022",
-    <a href={PDF3}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    4,
-    "SS-F-14-API",
-    "May 24, 2022",
-    <a href={PDF4}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    5,
-    "SS-F-14-API",
-    "June 25, 2022",
-    <a href={PDF5}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    6,
-    "SS-F-15-NISOC",
-    "June 25, 2022",
-    <a href={PDF6}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    7,
-    "SS-F-17-NISOC",
-    "Dec 16, 2022",
-    <a href={PDF7}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    8,
-    "SS-F-21-API",
-    "Jan 30, 2023",
-    <a href={PDF8}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    9,
-    "SS-F-25-Nisoc",
-    "June 17, 2023",
-    <a href={PDF9}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    10,
-    "SS-F-27-NISOC",
-    "Aug 9, 2023",
-    <a href={PDF10}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    11,
-    "SS-F-28-API",
-    "Sep 2, 2023",
-    <a href={PDF11}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    12,
-    "SS-F-46-API",
-    "July 29, 2024",
-    <a href={PDF12}>
-      <FaFilePdf style={{ fontSize: 24 }} />
-    </a>
-  ),
-  createData(
-    13,
-    "SS-F-42-NISOC",
-    "Aug 6, 2024",
-    <a href={PDF13}>
       <FaFilePdf style={{ fontSize: 24 }} />
     </a>
   ),
 ];
 
-export default function MiStarchLv() {
+export default function DanaSodaAsh() {
   return (
     <div className="flex">
       <IconContext.Provider value={{ style: { fontSize: 16 } }}>
@@ -256,13 +155,13 @@ export default function MiStarchLv() {
             mode="inline"
             items={menuContent}
             theme="light"
-            defaultSelectedKeys={["menu1item5"]}
-            defaultOpenKeys={["menu1", "menu1item5"]}
+            defaultSelectedKeys={["menu1item4"]}
+            defaultOpenKeys={["menu1", "menu1item4"]}
           />
         </ConfigProvider>
       </IconContext.Provider>
       <div id="layer" className="w-full">
-        <PanelInfo profile="MK" name="Mi Kish" kind="Administrator" />
+        <PanelInfo profile="DE" name="Dana Energy" kind="Administrator" />
         {/* Table */}
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">

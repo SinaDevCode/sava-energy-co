@@ -271,17 +271,19 @@ export default function SealandDashboard() {
             },
             components: {
               Menu: {
-                itemSelectedColor: "rgba(30, 189, 184, 1)",
-                itemColor: "#808080",
-                itemDisabledColor: "red",
-                itemHoverBg: "rgba(30, 189, 184, 0.2)",
-                itemSelectedBg: "rgba(30, 189, 184, 0.2)",
+                itemColor: "Black",
+                itemDisabledColor: "rgba(80, 80, 80, 0.5)",
+                itemHoverBg: "rgb(219, 237, 236)",
+                itemHoverColor: "#505050",
+                itemSelectedBg: "rgb(219, 237, 236)",
+                itemSelectedColor: "#000",
+                subMenuItemBg: "rgba(219, 237, 236, 0.7)",
               },
             },
           }}
         >
           <Menu
-            className="min-w-64 max-w-64 h-screen overflow-auto "
+            className="min-w-64 max-w-64 h-screen overflow-auto bg-cyan"
             mode="inline"
             items={menuContent}
             theme="light"
