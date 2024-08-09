@@ -21,7 +21,9 @@ const accounts = [
   },
   {
     id: "sealand",
-    username: "bibi_hakimeh",
+    username: "bibihakimeh",
     password: "drillingfluid2024",
   },
 ];
+
+export default accounts;

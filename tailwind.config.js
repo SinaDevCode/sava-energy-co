@@ -2,6 +2,18 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      Roboto: ["Roboto"],
+    },
+    colors: {
+      white: "#ffffff",
+      light: "#f0f1f3",
+      blue: "#2d325a",
+      cyan: "#1ebdb8",
+      gold: "#dbb13b",
+      gray: "#505050",
+      black: "#000000",
+    },
     extend: {},
   },
   plugins: [],

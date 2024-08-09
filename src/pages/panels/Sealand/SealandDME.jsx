@@ -1,4 +1,4 @@
-import { Menu, ConfigProvider, Tooltip } from "antd";
+import { Menu, ConfigProvider } from "antd";
 import { IconContext } from "react-icons/lib";
 import { FaFilePdf } from "react-icons/fa6";
 import { BiSolidDashboard } from "react-icons/bi";
@@ -6,6 +6,17 @@ import { AiFillExperiment } from "react-icons/ai";
 import { BsFillDoorOpenFill } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import PanelInfo from "../../../components/panelInfo";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@mui/material";
+
+import PDF1 from "../../../db/docs/sealand/DME/SE-DME-2024929.pdf";
 
 const menuContent = [
   {
@@ -238,15 +249,7 @@ const menuContent = [
     children: [
       {
         key: "buttonGroup2Item1",
-        label: (
-          <Tooltip
-            placement="right"
-            title="You don't have permission to do this"
-            color="cyan"
-          >
-            Equipments Inventory
-          </Tooltip>
-        ),
+        label: "Equipments Inventory",
         icon: <AiFillExperiment />,
         disabled: true,
       },
@@ -260,7 +263,22 @@ const menuContent = [
   },
 ];
 
-export default function SealandDashboard() {
+function createData(id, batchNo, date, file) {
+  return { id, batchNo, date, file };
+}
+
+const rows = [
+  createData(
+    1,
+    "SE-DME-2024929",
+    "1403-05",
+    <a href={PDF1}>
+      <FaFilePdf style={{ fontSize: 24 }} />
+    </a>
+  ),
+];
+
+export default function SealandDME() {
   return (
     <div className="flex">
       <IconContext.Provider value={{ style: { fontSize: 16 } }}>
@@ -285,12 +303,41 @@ export default function SealandDashboard() {
             mode="inline"
             items={menuContent}
             theme="light"
-            defaultSelectedKeys={["buttonGroup1Item1"]}
+            defaultSelectedKeys={["sub3Item3"]}
+            defaultOpenKeys={["menu1", "sub3"]}
           />
         </ConfigProvider>
       </IconContext.Provider>
       <div id="layer" className="w-full">
         <PanelInfo profile="S" name="Sealand" kind="Administrator" />
+        {/* Table */}
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Id</TableCell>
+                <TableCell>Batch&nbsp;No</TableCell>
+                <TableCell>Date</TableCell>
+                <TableCell>File</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.id}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.id}
+                  </TableCell>
+                  <TableCell>{row.batchNo}</TableCell>
+                  <TableCell>{row.date}</TableCell>
+                  <TableCell>{row.file}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </div>
     </div>
   );

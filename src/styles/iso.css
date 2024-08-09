@@ -1,0 +1,52 @@
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.iso {
+  padding: 1rem 0;
+  background-color: #2d325a;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.iso::before,
+.iso::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 5;
+}
+.iso::before {
+  left: 0;
+  background: linear-gradient(to left, transparent, #2d325a);
+}
+.iso::after {
+  right: 0;
+  background: linear-gradient(to right, transparent, #2d325a);
+}
+.iso .scroller {
+  display: flex;
+  align-items: center;
+  animation: scroll 70s infinite linear;
+  gap: 2rem;
+}
+.iso .scroller span {
+  color: #dbb13b;
+  font-size: 12px;
+  font-weight: 500;
+}
+.iso .scroller p {
+  color: #1a9e9a;
+  font-size: 12px;
+  font-weight: 500;
+}
