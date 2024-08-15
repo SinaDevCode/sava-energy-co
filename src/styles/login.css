@@ -1,0 +1,36 @@
+label {
+  padding: 0.25rem;
+  color: #808080;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #fff;
+  transform: translate(0.75rem, -0.125rem);
+  transition: all 0.3s ease;
+}
+
+input.fill {
+  outline: 1px solid rgb(45, 50, 90);
+}
+
+input.fill ~ label,
+input:focus ~ label {
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+  transform: translate(0, -28px);
+}
+
+@media (max-width: 768px) {
+  .loginForm {
+    border: none;
+    width: 100% !important;
+  }
+
+  canvas {
+    display: none !important;
+  }
+
+  img:not(.Details) {
+    display: none !important;
+  }
+}

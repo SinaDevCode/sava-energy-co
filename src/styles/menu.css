@@ -1,0 +1,12 @@
+.menuItem a {
+  background-color: white;
+  padding: 1rem;
+}
+
+.menuItem a.active {
+  color: rgb(219, 177, 59);
+}
+
+.menuItem a:hover {
+  background-color: #f1f3f3;
+}

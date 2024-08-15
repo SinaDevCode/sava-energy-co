@@ -1,0 +1,46 @@
+.navbar {
+  position: relative;
+  background-color: rgb(45, 50, 90);
+  min-height: 48px;
+  min-width: 36rem;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  left: -1.95rem;
+  height: 100%;
+  width: 2rem;
+  background-color: rgb(45, 50, 90);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.navItem a {
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+}
+
+.navItem a.active {
+  color: rgb(219, 177, 59);
+}
+
+@media (min-width: 1024px) {
+  .navItem a {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    min-width: 24rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    min-width: 16rem;
+  }
+}
