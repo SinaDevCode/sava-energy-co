@@ -4,21 +4,21 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import banner1 from "../images/banners/banner1.png";
-import banner2 from "../images/banners/banner2.png";
-import banner3 from "../images/banners/banner3.png";
-import banner4 from "../images/banners/banner4.png";
+import banner1 from "../assets/images/slider/banner1.webp";
+import banner2 from "../assets/images/slider/banner2.webp";
+import banner3 from "../assets/images/slider/banner3.webp";
+import banner4 from "../assets/images/slider/banner4.webp";
 
-function Slider() {
+const Slider = () => {
   return (
     <Swiper
-      className="flex w-full h-[80vh]"
+      className="flex w-full h-[80svh]"
       style={{
-        "--swiper-navigation-color": "#1ebdb8",
-        "--swiper-pagination-color": "#1ebdb8",
+        "--swiper-navigation-color": "#dbb13b",
+        "--swiper-pagination-color": "#dbb13b",
       }}
       autoplay={{
-        delay: 4000,
+        delay: 3000,
         disableOnInteraction: false,
       }}
       slidesPerView={1}
@@ -62,6 +62,6 @@ function Slider() {
       </SwiperSlide>
     </Swiper>
   );
-}
+};
 
 export default Slider;

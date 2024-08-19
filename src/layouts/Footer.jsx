@@ -1,15 +1,12 @@
-import footerDetails from "../images/sample/footerDetails.png";
+import footerSample from "../assets/images/samples/footerDetails.png";
 
-function Footer() {
+const Footer = () => {
   return (
-    <div className="relative bg-blue border-t-2 border-gold p-4">
-      <p className="text-center text-light">Copyright © SAVA Energy 2023</p>
-      <img
-        src={footerDetails}
-        className="absolute bottom-0 left-1/2 h-full translate-x-36"
-      />
+    <div className="relative p-6 border-t-2 border-t-Gold text-center text-sm text-White bg-DarkBlue">
+      <p>Copyright © SAVA Energy 2023</p>
+      <img src={footerSample} className="absolute h-full bottom-0 right-1/4" />
     </div>
   );
-}
+};
 
 export default Footer;

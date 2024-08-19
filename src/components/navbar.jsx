@@ -1,151 +1,67 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { IconContext } from "react-icons";
-import { LuMenu } from "react-icons/lu";
-import { IoClose } from "react-icons/io5";
-import { Tooltip } from "@mui/material";
 
-function Navbar() {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
-
+const Navbar = () => {
   return (
-    <>
-      <div className="h-11 w-full flex items-center gap-8 relative bg-blue before:content-['']">
-        <NavLink to="/" className="text-white text-sm hidden lg:block">
-          Home
-        </NavLink>
-
-        {/* Developer Note: These below links are disable, remove the tooltips when they become enable and add 'to="path"' to the NavLink */}
-        <Tooltip
-          title="Disabled"
-          arrow
-          componentsProps={{
-            tooltip: {
-              sx: {
-                bgcolor: "#2d325a",
-                "& .MuiTooltip-arrow": {
-                  color: "#2d325a",
-                },
-              },
-            },
-          }}
-        >
-          <NavLink className="text-white text-sm hidden lg:block">
-            About
-          </NavLink>
-        </Tooltip>
-
-        <Tooltip
-          title="Disabled"
-          arrow
-          componentsProps={{
-            tooltip: {
-              sx: {
-                bgcolor: "#2d325a",
-                "& .MuiTooltip-arrow": {
-                  color: "#2d325a",
-                },
-              },
-            },
-          }}
-        >
-          <NavLink className="text-white text-sm hidden lg:block">
-            Services
-          </NavLink>
-        </Tooltip>
-
-        <Tooltip
-          title="Disabled"
-          arrow
-          componentsProps={{
-            tooltip: {
-              sx: {
-                bgcolor: "#2d325a",
-                "& .MuiTooltip-arrow": {
-                  color: "#2d325a",
-                },
-              },
-            },
-          }}
-        >
-          <NavLink className="text-white text-sm hidden lg:block">
-            Products
-          </NavLink>
-        </Tooltip>
-
-        <Tooltip
-          title="Disabled"
-          arrow
-          componentsProps={{
-            tooltip: {
-              sx: {
-                bgcolor: "#2d325a",
-                "& .MuiTooltip-arrow": {
-                  color: "#2d325a",
-                },
-              },
-            },
-          }}
-        >
-          <NavLink className="text-white text-sm hidden lg:block">
-            Lab Equipments
-          </NavLink>
-        </Tooltip>
-
-        <Tooltip
-          title="Disabled"
-          arrow
-          componentsProps={{
-            tooltip: {
-              sx: {
-                bgcolor: "#2d325a",
-                "& .MuiTooltip-arrow": {
-                  color: "#2d325a",
-                },
-              },
-            },
-          }}
-        >
-          <NavLink className="text-white text-sm hidden lg:block">
-            Projects
-          </NavLink>
-        </Tooltip>
-
-        <Tooltip
-          title="Disabled"
-          arrow
-          componentsProps={{
-            tooltip: {
-              sx: {
-                bgcolor: "#2d325a",
-                "& .MuiTooltip-arrow": {
-                  color: "#2d325a",
-                },
-              },
-            },
-          }}
-        >
-          <NavLink className="text-white text-sm hidden lg:block">
-            Contact
-          </NavLink>
-        </Tooltip>
-
-        <IconContext.Provider value={{ color: "#fff" }}>
-          <div
-            className="cursor-pointer absolute right-16 lg:hidden"
-            onClick={() =>
-              // This event get the previous boolean value and change to the new one
-              setMenuIsOpen((previous) => {
-                setMenuIsOpen(!previous);
-              })
-            }
-          >
-            {menuIsOpen ? <IoClose size="20" /> : <LuMenu size="20" />}
-          </div>
-        </IconContext.Provider>
-      </div>
-    </>
+    <div className="navItem pr-4 flex items-center w-full gap-8 bg-DarkBlue">
+      <NavLink
+        to="/"
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : ""
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/About"
+        className={({ isActive, isPending }) =>
+          // Change "Disable" to "" when the link is active
+          isPending ? "pending" : isActive ? "active" : "Disable"
+        }
+      >
+        About
+      </NavLink>
+      <NavLink
+        to="/Services"
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : "Disable"
+        }
+      >
+        Services
+      </NavLink>
+      <NavLink
+        to="/Products"
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : "Disable"
+        }
+      >
+        Products
+      </NavLink>
+      <NavLink
+        to="/LabEquipments"
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : "Disable"
+        }
+      >
+        Lab&nbsp;Equipments
+      </NavLink>
+      <NavLink
+        to="/Projects"
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : "Disable"
+        }
+      >
+        Projects
+      </NavLink>
+      <NavLink
+        to="/Contact"
+        className={({ isActive, isPending }) =>
+          isPending ? "pending" : isActive ? "active" : "Disable"
+        }
+      >
+        Contact
+      </NavLink>
+    </div>
   );
-}
+};
 
 export default Navbar;
