@@ -12,7 +12,7 @@ const Header = () => {
         muted
         autoPlay
         loop
-        className="w-32 md:w-[200px] translate-x-8  md:translate-x-0"
+        className="w-[200px] translate-x-10"
       ></video>
       <div className="w-3/4 h-full flex flex-col items-end justify-between gap-2">
         <Link
