@@ -28,6 +28,8 @@ export default {
       Cyan: "rgb(30, 189, 184)",
       Grey: "rgb(80, 80, 80)",
       Gold: "rgb(219, 177, 59)",
+      // this color is added for inactive links
+      Disable: "rgba(255, 255, 255, 0.5)",
     },
     extend: {},
   },

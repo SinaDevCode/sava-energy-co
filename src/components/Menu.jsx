@@ -15,7 +15,7 @@ const Menu = () => {
     <>
       <HiMenuAlt3
         color="white"
-        className="cursor-pointer flex mr-8 text-3xl lg:hidden"
+        className="cursor-pointer flex mr-8 text-5xl sm:text-3xl lg:hidden"
         onClick={toggleDrawer(true)}
       />
       <Drawer open={isOpen} anchor="right" onClose={toggleDrawer(false)}>
@@ -23,7 +23,7 @@ const Menu = () => {
           sx={{ width: 250 }}
           role="presentation"
           onClick={toggleDrawer(false)}
-          className="menuItem flex flex-col h-full "
+          className="menuItem flex flex-col h-full"
         >
           <>
             <NavLink
@@ -37,7 +37,8 @@ const Menu = () => {
             <NavLink
               to="/About"
               className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
+                // Developer Note : Change "menuDisable" to "" when the link is active
+                isPending ? "pending" : isActive ? "active" : "menuDisable"
               }
             >
               About
@@ -45,7 +46,7 @@ const Menu = () => {
             <NavLink
               to="/Services"
               className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
+                isPending ? "pending" : isActive ? "active" : "menuDisable"
               }
             >
               Services
@@ -53,7 +54,7 @@ const Menu = () => {
             <NavLink
               to="/Products"
               className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
+                isPending ? "pending" : isActive ? "active" : "menuDisable"
               }
             >
               Products
@@ -61,7 +62,11 @@ const Menu = () => {
             <NavLink
               to="/LabEquipments"
               className={({ isActive, isPending }) =>
-                isPending ? "pending hidden lg:block" : isActive ? "active" : ""
+                isPending
+                  ? "pending hidden lg:block"
+                  : isActive
+                  ? "active"
+                  : "menuDisable"
               }
             >
               Lab Equipments
@@ -69,7 +74,7 @@ const Menu = () => {
             <NavLink
               to="/Projects"
               className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
+                isPending ? "pending" : isActive ? "active" : "menuDisable"
               }
             >
               Projects
@@ -77,14 +82,12 @@ const Menu = () => {
             <NavLink
               to="/Contact"
               className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
+                isPending ? "pending" : isActive ? "active" : "menuDisable"
               }
             >
               Contact
             </NavLink>
           </>
-          <Divider />
-          <NavLink to="/Login">Login</NavLink>
         </Box>
       </Drawer>
     </>

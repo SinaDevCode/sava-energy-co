@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import useLoadImage from "../hooks/useLoadImage";
 import { Blurhash } from "react-blurhash";
 import { Link } from "react-router-dom";
 import { CgClose } from "react-icons/cg";
@@ -8,14 +8,6 @@ import LoginDetails from "../assets/images/login/loginDetails.png";
 import "../styles/login.css";
 
 const Login = () => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  useEffect(() => {
-    const image = new Image();
-    image.setAttribute("src", LoginImage);
-    image.onload = () => setImageLoaded(true);
-  }, []);
-
   return (
     <div className="w-screen h-screen flex p-4 gap-4 relative">
       <Link to="/" className="cursor-pointer absolute top-6 right-6">
@@ -24,7 +16,7 @@ const Login = () => {
 
       <Blurhash
         style={{
-          display: imageLoaded ? "none" : "inline",
+          display: useLoadImage(LoginImage) ? "none" : "inline",
         }}
         hash="LsFZHRM_M{xu?wt8IUt8kDxuRjM{"
         width="40%"
@@ -37,11 +29,12 @@ const Login = () => {
       <img
         src={LoginImage}
         alt=""
-        style={{ display: imageLoaded ? "inline" : "none" }}
-        className="w-2/5 h-full rounded-lg object-cover object-center"
+        style={{ display: useLoadImage(LoginImage) ? "inline" : "none" }}
+        className="loginImage w-2/5 h-full rounded-lg object-cover object-center"
       />
 
       <LoginForm />
+
       <img
         src={LoginDetails}
         alt=""

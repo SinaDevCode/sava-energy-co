@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navItem flex items-center w-full gap-8 bg-DarkBlue">
+    <div className="navItem pr-4 flex items-center w-full gap-8 bg-DarkBlue">
       <NavLink
         to="/"
         className={({ isActive, isPending }) =>
@@ -14,7 +14,8 @@ const Navbar = () => {
       <NavLink
         to="/About"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          // Change "Disable" to "" when the link is active
+          isPending ? "pending" : isActive ? "active" : "Disable"
         }
       >
         About
@@ -22,7 +23,7 @@ const Navbar = () => {
       <NavLink
         to="/Services"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          isPending ? "pending" : isActive ? "active" : "Disable"
         }
       >
         Services
@@ -30,7 +31,7 @@ const Navbar = () => {
       <NavLink
         to="/Products"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          isPending ? "pending" : isActive ? "active" : "Disable"
         }
       >
         Products
@@ -38,7 +39,7 @@ const Navbar = () => {
       <NavLink
         to="/LabEquipments"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          isPending ? "pending" : isActive ? "active" : "Disable"
         }
       >
         Lab&nbsp;Equipments
@@ -46,7 +47,7 @@ const Navbar = () => {
       <NavLink
         to="/Projects"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          isPending ? "pending" : isActive ? "active" : "Disable"
         }
       >
         Projects
@@ -54,7 +55,7 @@ const Navbar = () => {
       <NavLink
         to="/Contact"
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "active" : ""
+          isPending ? "pending" : isActive ? "active" : "Disable"
         }
       >
         Contact

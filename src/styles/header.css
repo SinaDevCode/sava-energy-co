@@ -23,9 +23,26 @@
   display: none;
 }
 
+.navItem a:hover {
+  color: rgb(30, 189, 184);
+}
+
 .navItem a.active {
   color: rgb(219, 177, 59);
 }
+
+/* this class is for inactive links and remove this class when all the links become active */
+/* ------------------------ Start ----------------------------------- */
+.Disable {
+  color: rgba(255, 255, 255, 0.5) !important;
+  pointer-events: none;
+}
+
+.menuDisable {
+  color: rgba(0, 0, 0, 0.5) !important;
+  pointer-events: none;
+}
+/* ------------------------ End ----------------------------------- */
 
 @media (min-width: 1024px) {
   .navItem a {
@@ -41,6 +58,6 @@
 
 @media (max-width: 640px) {
   .navbar {
-    min-width: 16rem;
+    min-width: 12rem;
   }
 }
