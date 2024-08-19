@@ -50,6 +50,12 @@
   }
 }
 
+@media (max-width: 992px) {
+  .navbar {
+    min-width: 30rem;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     min-width: 24rem;
