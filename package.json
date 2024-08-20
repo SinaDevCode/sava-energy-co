@@ -13,6 +13,7 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^5.16.7",
+    "antd": "^5.20.2",
     "blurhash": "^2.0.5",
     "react": "^18.3.1",
     "react-blurhash": "^0.3.0",

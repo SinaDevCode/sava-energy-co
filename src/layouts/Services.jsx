@@ -8,7 +8,7 @@ import activeProducts from "../assets/images/home/products-active.webp";
 
 const Services = () => {
   return (
-    <div className="flex flex-wrap justify-center items-center bg-Cyan py-12 gap-8">
+    <div className="flex flex-wrap justify-center items-center bg-Cyan py-16 gap-8">
       <FeatureCard
         inactive={services}
         active={activeServices}

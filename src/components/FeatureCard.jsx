@@ -5,7 +5,7 @@ const FeatureCard = (props) => {
 
   return (
     <div
-      className="flex flex-col justify-start items-center w-[350px] h-[400px] px-4 gap-4"
+      className="flex flex-col justify-start items-center w-[350px] h-[400px] px-4 gap-4 md:transition-transform md:hover:-translate-y-4"
       onMouseEnter={() => setIsHovered(true)}
       onMouseOut={() => setIsHovered(false)}
     >

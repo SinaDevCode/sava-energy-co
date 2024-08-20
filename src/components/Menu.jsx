@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Drawer, Divider } from "@mui/material";
+import { Box, Drawer } from "@mui/material";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 import "../styles/menu.css";
