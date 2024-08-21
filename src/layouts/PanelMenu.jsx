@@ -1,5 +1,4 @@
 import { ConfigProvider, Menu } from "antd";
-import MenuContent from "../db/panels/sealand/menuContent/menuContent";
 import { IconContext } from "react-icons";
 import "../styles/panelMenu.css";
 
@@ -31,10 +30,10 @@ const PanelMenu = (props) => {
       >
         <Menu
           mode="inline"
-          items={MenuContent}
+          items={props.menuContent}
           defaultSelectedKeys={props.selectedKeys}
           defaultOpenKeys={props.openKeys}
-          className="absolute top-0 left-0 overflow-auto w-64 h-screen bg-DarkBlue"
+          className="fixed top-0 left-0 overflow-auto w-64 h-screen bg-DarkBlue"
         />
       </ConfigProvider>
     </IconContext.Provider>

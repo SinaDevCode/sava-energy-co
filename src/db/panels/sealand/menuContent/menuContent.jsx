@@ -2,8 +2,9 @@ import { NavLink } from "react-router-dom";
 import { BiSolidDashboard } from "react-icons/bi";
 import { BsClipboardCheckFill } from "react-icons/bs";
 import { AiFillExperiment } from "react-icons/ai";
-import { BsFillDoorOpenFill } from "react-icons/bs";
+import { ImExit } from "react-icons/im";
 
+// MenuContent For Sealand
 const menuContent = [
   {
     key: "btnGroup1",
@@ -290,7 +291,7 @@ const menuContent = [
       {
         key: "btnGroup2Item1",
         label: <NavLink to="/">Exit</NavLink>,
-        icon: <BsFillDoorOpenFill />,
+        icon: <ImExit />,
       },
     ],
   },
