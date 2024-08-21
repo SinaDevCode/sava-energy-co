@@ -1,1 +1,16 @@
+.ant-menu.ant-menu-root {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
 
+.iconStyle {
+  fill: rgb(219, 177, 59);
+}
+
+ul.ant-menu.ant-menu-root .ant-menu-item-group .ant-menu-item:hover .iconStyle,
+.ant-menu-submenu.ant-menu-submenu-inline
+  .ant-menu-submenu-title:hover
+  .iconStyle {
+  fill: rgba(219, 177, 59, 0.5);
+}

@@ -262,8 +262,11 @@ const menuContent = [
     children: [
       {
         key: "menu2Item1",
-        label: "API Filter Press",
-        disabled: true,
+        label: (
+          <NavLink to="/sealand/EquipmentsApiFilterPress">
+            API Filter Press
+          </NavLink>
+        ),
       },
       {
         key: "menu2Item2",
@@ -276,8 +279,7 @@ const menuContent = [
       },
       {
         key: "menu2Item4",
-        label: "VG Meter",
-        disabled: true,
+        label: <NavLink to="/sealand/EquipmentsVGMeter">VG Meter</NavLink>,
       },
     ],
   },
