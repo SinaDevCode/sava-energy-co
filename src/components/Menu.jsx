@@ -26,14 +26,7 @@ const Menu = () => {
           className="menuItem flex flex-col h-full"
         >
           <>
-            <NavLink
-              to="/"
-              className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""
-              }
-            >
-              Home
-            </NavLink>
+            <NavLink to="/">Home</NavLink>
             <NavLink
               to="/About"
               className={({ isActive, isPending }) =>
@@ -59,18 +52,7 @@ const Menu = () => {
             >
               Products
             </NavLink>
-            <NavLink
-              to="/LabEquipments"
-              className={({ isActive, isPending }) =>
-                isPending
-                  ? "pending hidden lg:block"
-                  : isActive
-                  ? "active"
-                  : "menuDisable"
-              }
-            >
-              Lab Equipments
-            </NavLink>
+            <NavLink to="/LabEquipments">Lab Equipments</NavLink>
             <NavLink
               to="/Projects"
               className={({ isActive, isPending }) =>

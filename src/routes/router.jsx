@@ -1,5 +1,6 @@
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import LabEquipments from "../pages/LabEquipments";
 
 // ========== Sealand ==========
 import SealandDashboard from "../pages/panels/sealand/sealandDashboard";
@@ -26,6 +27,7 @@ import DanaStarchLv from "../pages/panels/dana/danaStarchLv";
 const router = [
   { path: "/", element: <Home /> },
   { path: "/Login", element: <Login /> },
+  { path: "/LabEquipments", element: <LabEquipments /> },
   // ========== Sealand ==========
   { path: "/sealand", element: <SealandDashboard /> },
   { path: "/sealand/DME", element: <SealandDME /> },
