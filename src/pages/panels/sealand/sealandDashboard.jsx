@@ -11,7 +11,7 @@ const SealandDashboard = () => {
           profile="S"
           name="Sealand"
           textColor="rgb(16, 59, 102)"
-          textBackground="rgba(16, 59, 102, 0.3)"
+          textBackground="rgba(16, 59, 102, 1)"
         />
       </div>
     </div>

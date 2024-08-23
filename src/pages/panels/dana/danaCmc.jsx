@@ -13,11 +13,11 @@ const DanaCmc = () => {
         menuContent={MenuContent}
       />
       <div className="w-full h-screen ml-64">
-        <PanelInfo
+      <PanelInfo
           profile="DE"
           name="Dana Energy"
           textColor="rgb(243, 112, 32)"
-          textBackground="rgba(243, 112, 32, 0.3)"
+          textBackground="rgba(243, 112, 32, 1)"
         />
         <PanelTable TableContentCategory={TableContent.CMC} />
       </div>

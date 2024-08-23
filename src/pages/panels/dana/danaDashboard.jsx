@@ -10,8 +10,8 @@ const DanaDashboard = () => {
         <PanelInfo
           profile="DE"
           name="Dana Energy"
-          textColor="rgb(249, 103, 103)"
-          textBackground="rgba(249, 103, 103, 0.3)"
+          textColor="rgb(243, 112, 32)"
+          textBackground="rgba(243, 112, 32, 1)"
         />
       </div>
     </div>

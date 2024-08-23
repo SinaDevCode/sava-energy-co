@@ -17,7 +17,7 @@ const MiStarchLv = () => {
           profile="MK"
           name="MI Kish"
           textColor="rgb(249, 103, 103)"
-          textBackground="rgba(249, 103, 103, 0.3)"
+          textBackground="rgba(249, 103, 8, 1)"
         />
         <PanelTable TableContentCategory={TableContent.StarchLv} />
       </div>
