@@ -20,7 +20,11 @@ const FeatureCard = (props) => {
       >
         {props.title}
       </h2>
-      <p className="text-justify text-sm text-Grey pointer-events-none">
+      <p
+        className={`text-justify text-sm text-Grey pointer-events-none ${
+          isHovered ? "text-White" : "text-Grey"
+        }`}
+      >
         {props.text}
       </p>
     </div>

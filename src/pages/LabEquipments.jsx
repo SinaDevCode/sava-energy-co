@@ -26,25 +26,25 @@ export default function LabEquipments() {
     <>
       <Header />
 
-      <div className="grid grid-cols-4 grid-rows-3 gap-4 px-16">
-        <ProductsCard imageURL={image2} />
-        <ProductsCard imageURL={image3} />
-        <ProductsCard imageURL={image4} />
-        <ProductsCard imageURL={image5} />
-        <ProductsCard imageURL={image6} />
-        <ProductsCard imageURL={image7} />
-        <ProductsCard imageURL={image8} />
-        <ProductsCard imageURL={image9} />
-        <ProductsCard imageURL={image10} />
-        <ProductsCard imageURL={image11} />
+      <div className="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-8 p-16">
+        <ProductsCard imageURL={image2} alt="VG Meter-FANN 35" />
+        <ProductsCard imageURL={image3} alt="VG Meter-OFITE" />
+        <ProductsCard imageURL={image4} alt="API Filter Press-OFITE" />
+        <ProductsCard imageURL={image5} alt="HT-HP Filter Press-OFITE" />
+        <ProductsCard imageURL={image6} alt="Retort Kit-OFITE" />
+        <ProductsCard imageURL={image7} alt="Mud Balance-OFITE" />
+        <ProductsCard imageURL={image8} alt="Mud Balance-FANN" />
+        <ProductsCard imageURL={image9} alt="Marsh Funnel & Cup" />
+        <ProductsCard imageURL={image10} alt="Mixer 3Cup-Hamilton" />
+        <ProductsCard imageURL={image11} alt="HT-HP Filter Press" />
 
-        <ProductsCard imageURL={image13} />
-        <ProductsCard imageURL={image14} />
-        <ProductsCard imageURL={image15} />
-        <ProductsCard imageURL={image16} />
-        <ProductsCard imageURL={image17} />
-        <ProductsCard imageURL={image18} />
-        <ProductsCard imageURL={image19} />
+        <ProductsCard imageURL={image13} alt="Thermo Cup-OFITE" />
+        <ProductsCard imageURL={image14} alt="Thermo Cup-FANN" />
+        <ProductsCard imageURL={image15} alt="Filter Paper FANN" />
+        <ProductsCard imageURL={image16} alt="Filter Paper FANN" />
+        <ProductsCard imageURL={image17} alt="Filter Paper FANN" />
+        <ProductsCard imageURL={image18} alt="Filter Paper FANN" />
+        <ProductsCard imageURL={image19} alt="Filter Paper FANN" />
       </div>
       <Footer />
     </>
