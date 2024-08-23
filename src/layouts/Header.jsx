@@ -17,7 +17,7 @@ const Header = () => {
       <div className="w-3/4 h-full flex flex-col items-end justify-between gap-2">
         <Link
           to="/Login"
-          className="w-32 py-2 m-2 text-white text-sm font-bold text-center rounded-lg transition-all bg-Cyan hover:bg-Gold text-White"
+          className="w-32 py-2 m-2 text-white text-sm font-bold text-center rounded-lg transition-all bg-Gold hover:bg-Cyan text-White"
         >
           Login
         </Link>

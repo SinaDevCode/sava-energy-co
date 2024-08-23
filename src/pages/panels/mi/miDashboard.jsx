@@ -10,8 +10,8 @@ const MiDashboard = () => {
         <PanelInfo
           profile="MK"
           name="MI Kish"
-          textColor="rgb(249, 103, 103)"
-          textBackground="rgba(249, 103, 103, 0.3)"
+          textColor="rgb(249, 103, 8)"
+          textBackground="rgba(249, 103, 8, 1)"
         />
       </div>
     </div>

@@ -5,6 +5,7 @@ import labEquipmentsImage from "../assets/images/home/lab-equipments.webp";
 import activeServices from "../assets/images/home/services-active.webp";
 import activeLabEquipmentsImage from "../assets/images/home/lab-equipments-active.webp";
 import activeProducts from "../assets/images/home/products-active.webp";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -21,12 +22,14 @@ const Services = () => {
         title="PRODUCTS"
         text="SAVA helps oil and gas operators increase efficiency and lower costs by designing and engineering drilling fluid systems and additives that accommodate a wide range of drilling environments and demanding applications-HPHT, deep water, shale gas, heavy oil, depleted wells, and more."
       ></FeatureCard>
-      <FeatureCard
-        inactive={labEquipmentsImage}
-        active={activeLabEquipmentsImage}
-        title="LAB EQUIPMENTS"
-        text="Our drilling fluids testing equipment sales line includes innovative designs such as the inline Rheometer, VG Meter, Retorts, Aging Cells, Roller Ovens, Mud Balances, Filter Presses, HT HP Filter Press, Marsh Funnel-Cup, Sand Content kit, Mixer, spare parts and all other instruments required to evaluate drilling fluid properties."
-      ></FeatureCard>
+      <Link to="/LabEquipments">
+        <FeatureCard
+          inactive={labEquipmentsImage}
+          active={activeLabEquipmentsImage}
+          title="LAB EQUIPMENTS"
+          text="Our drilling fluids testing equipment sales line includes innovative designs such as the inline Rheometer, VG Meter, Retorts, Aging Cells, Roller Ovens, Mud Balances, Filter Presses, HT HP Filter Press, Marsh Funnel-Cup, Sand Content kit, Mixer, spare parts and all other instruments required to evaluate drilling fluid properties."
+        ></FeatureCard>
+      </Link>
     </div>
   );
 };

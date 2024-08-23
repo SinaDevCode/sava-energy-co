@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navItem pr-4 flex items-center w-full gap-8 bg-DarkBlue">
+    <div className="navItem pr-8 xl:pr-36 flex items-center w-full gap-8 bg-DarkBlue">
       <NavLink to="/">Home</NavLink>
       <NavLink to="/About" className="Disable">
         About
@@ -13,9 +13,7 @@ const Navbar = () => {
       <NavLink to="/Products" className="Disable">
         Products
       </NavLink>
-      <NavLink to="/LabEquipments">
-        Lab&nbsp;Equipments
-      </NavLink>
+      <NavLink to="/LabEquipments">Lab&nbsp;Equipments</NavLink>
       <NavLink to="/Projects" className="Disable">
         Projects
       </NavLink>

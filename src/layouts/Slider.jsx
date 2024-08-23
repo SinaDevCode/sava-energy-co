@@ -1,8 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 import banner1 from "../assets/images/slider/banner1.webp";
 import banner2 from "../assets/images/slider/banner2.webp";
@@ -14,7 +13,6 @@ const Slider = () => {
     <Swiper
       className="flex w-full h-[80svh]"
       style={{
-        "--swiper-navigation-color": "#dbb13b",
         "--swiper-pagination-color": "#dbb13b",
       }}
       autoplay={{
@@ -25,8 +23,7 @@ const Slider = () => {
       spaceBetween={30}
       loop={true}
       pagination={{ clickable: true }}
-      navigation={{ clickable: true }}
-      modules={[Autoplay, Pagination, Navigation]}
+      modules={[Autoplay, Pagination]}
     >
       <SwiperSlide>
         <img
