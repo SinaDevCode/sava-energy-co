@@ -1,6 +1,7 @@
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import LabEquipments from "../pages/LabEquipments";
+import Services from "../pages/Services";
 
 // ========== Sealand ==========
 import SealandDashboard from "../pages/panels/sealand/sealandDashboard";
@@ -25,40 +26,44 @@ import DanaStarchHt from "../pages/panels/dana/danaStarchHt";
 import DanaStarchLv from "../pages/panels/dana/danaStarchLv";
 
 const router = [
-  { path: "/", element: <Home /> },
-  { path: "/Login", element: <Login /> },
-  { path: "/LabEquipments", element: <LabEquipments /> },
-  // ========== Sealand ==========
-  { path: "/sealand", element: <SealandDashboard /> },
-  { path: "/sealand/DME", element: <SealandDME /> },
-  { path: "/sealand/OxygenScav", element: <SealandOxygenScav /> },
-  { path: "/sealand/PipeLaxW", element: <SealandPipeLaxW /> },
-  { path: "/sealand/XanthanGum", element: <SealandXanthanGum /> },
-  { path: "/sealand/kwickSeal", element: <SealandKwickSeal /> },
-  // ========== Sealand Equipments ==========
-  {
-    path: "/sealand/EquipmentsCupHeater",
-    element: <SealandEquipmentsCupHeater />,
-  },
-  {
-    path: "/sealand/EquipmentsApiFilterPress",
-    element: <SealandEquipmentsApiFilterPress />,
-  },
-  {
-    path: "/sealand/EquipmentsVGMeter",
-    element: <SealandEquipmentsVGMeter />,
-  },
-  // ========== MI Kish ==========
-  { path: "/mi", element: <MiDashboard /> },
-  { path: "/mi/StarchLv", element: <MiStarchLv /> },
-  // ========== Dana Energy ==========
-  { path: "/dana", element: <DanaDashboard /> },
-  { path: "/dana/Cmc", element: <DanaCmc /> },
-  { path: "/dana/Lime", element: <DanaLime /> },
-  { path: "/dana/PolyanionicCellulose", element: <DanaPolyanionicCellulose /> },
-  { path: "/dana/SodaAsh", element: <DanaSodaAsh /> },
-  { path: "/dana/StarchLv", element: <DanaStarchHt /> },
-  { path: "/dana/StarchHt", element: <DanaStarchLv /> },
+	{ path: "/", element: <Home /> },
+	{ path: "/Login", element: <Login /> },
+	// { path: "/LabEquipments", element: <LabEquipments /> },
+	{ path: "/Services", element: <Services /> },
+	// ========== Sealand ==========
+	{ path: "/sealand", element: <SealandDashboard /> },
+	{ path: "/sealand/DME", element: <SealandDME /> },
+	{ path: "/sealand/OxygenScav", element: <SealandOxygenScav /> },
+	{ path: "/sealand/PipeLaxW", element: <SealandPipeLaxW /> },
+	{ path: "/sealand/XanthanGum", element: <SealandXanthanGum /> },
+	{ path: "/sealand/kwickSeal", element: <SealandKwickSeal /> },
+	// ========== Sealand Equipments ==========
+	{
+		path: "/sealand/EquipmentsCupHeater",
+		element: <SealandEquipmentsCupHeater />,
+	},
+	{
+		path: "/sealand/EquipmentsApiFilterPress",
+		element: <SealandEquipmentsApiFilterPress />,
+	},
+	{
+		path: "/sealand/EquipmentsVGMeter",
+		element: <SealandEquipmentsVGMeter />,
+	},
+	// ========== MI Kish ==========
+	{ path: "/mi", element: <MiDashboard /> },
+	{ path: "/mi/StarchLv", element: <MiStarchLv /> },
+	// ========== Dana Energy ==========
+	{ path: "/dana", element: <DanaDashboard /> },
+	{ path: "/dana/Cmc", element: <DanaCmc /> },
+	{ path: "/dana/Lime", element: <DanaLime /> },
+	{
+		path: "/dana/PolyanionicCellulose",
+		element: <DanaPolyanionicCellulose />,
+	},
+	{ path: "/dana/SodaAsh", element: <DanaSodaAsh /> },
+	{ path: "/dana/StarchLv", element: <DanaStarchHt /> },
+	{ path: "/dana/StarchHt", element: <DanaStarchLv /> },
 ];
 
 export default router;
