@@ -22,10 +22,10 @@ const Services = () => {
 						Drilling Fluid Measurement Unit
 					</h2>
 				</span>
-				<div className="flex justify-center items-center flex-wrap gap-48">
+				<div className="flex justify-center items-center flex-wrap gap-48 mt-8 md:mt-16">
 					<img
 						src={image1}
-						className="h-[400px] w-auto translate-x-16"
+						className="h-[400px] w-auto translate-x-8"
 					/>
 					<div className="flex flex-col w-[500px] gap-6">
 						<p className="text-justify">
@@ -57,20 +57,25 @@ const Services = () => {
 								Functions
 							</h2>
 						</div>
-						<li className="text-justify text-Cyan font-medium">
-							Measurement of fluid rotational viscosity (reading
-							at 3, 6, 100, 200, 300, 600 rpm) and density
-							(following API 13B standard) from root temperature
-							to 65C.
-						</li>
-						<li className="text-justify text-Cyan font-medium">
-							Fast calculation of initial cut, final cut, PV
-							(Plastic Viscosity), and YP (Yield Point) values.
-						</li>
+						<span className="relative translate-x-8">
+							<ul className="text-justify text-Cyan font-medium circle">
+								Measurement of fluid rotational viscosity
+								(reading at 3, 6, 100, 200, 300, 600 rpm) and
+								density (following API 13B standard) from root
+								temperature to 65C.
+							</ul>
+						</span>
+						<span className="relative translate-x-8">
+							<ul className="text-justify text-Cyan font-medium circle">
+								Fast calculation of initial cut, final cut, PV
+								(Plastic Viscosity), and YP (Yield Point)
+								values.
+							</ul>
+						</span>
 					</div>
 					<img
 						src={image2}
-						className="h-[400px] w-auto"
+						className="h-[400px] w-auto -translate-x-10"
 					/>
 				</div>
 			</div>
@@ -85,7 +90,7 @@ const Services = () => {
 						Microchip Products
 					</h2>
 				</span>
-				<div className="flex md:gap-48 px-16 flex-wrap-reverse md:justify-start justify-center">
+				<div className="flex md:gap-48 px-16 flex-wrap-reverse md:justify-start justify-center mt-8 md:mt-16">
 					<div className="flex flex-col">
 						<table>
 							<thead>
@@ -205,8 +210,8 @@ const Services = () => {
 					</div>
 				</div>
 			</div>
-			<div className="px-20 my-8">
-				<div className="flex items-center gap-2">
+			<div className="px-8 my-8">
+				<div className="flex items-center gap-2 mt-8 mb-4 lg:mt-20">
 					<img
 						src={image4}
 						className="w-8"
@@ -216,7 +221,7 @@ const Services = () => {
 					</h2>
 				</div>
 				<div className="flex lg:gap-[425px] flex-col lg:flex-row items-start gap-4">
-					<div className="flex flex-col lg:ml-10 gap-2">
+					<div className="flex flex-col md:pl-10 gap-2">
 						<ul className="disc">Ultra small size</ul>
 						<ul className="disc">MEMS Technology</ul>
 						<ul className="disc">Wide Operation Range</ul>
@@ -231,20 +236,20 @@ const Services = () => {
 					</div>
 					<div className="flex flex-col">
 						<ul className="feature">Innovative technology</ul>
-						<p className="mb-2 text-Cyan w-[475px]">
+						<p className="mb-2 text-Cyan w-[400px]">
 							An innovative open platform to provide dynamic
 							measurements over the entire drilled borehole
 						</p>
 						<ul className="feature">
 							Near real-time diagnostic tool
 						</ul>
-						<p className="mb-2 text-Cyan w-[475px]">
+						<p className="mb-2 text-Cyan w-[400px]">
 							Function as a diagnostic tool for problems
 							encountered during drilling and completion
 							operations.
 						</p>
 						<ul className="feature">Convenient & Timesaving</ul>
-						<p className="mb-2 text-Cyan w-[475px]">
+						<p className="mb-2 text-Cyan w-[450px]">
 							A simple and quick way to access download
 							measurements without tripping operation and tool
 							maintenance.
