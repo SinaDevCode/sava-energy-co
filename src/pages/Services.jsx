@@ -46,7 +46,7 @@ const Services = () => {
 						</p>
 					</div>
 				</div>
-				<div className="flex flex-col-reverse lg:flex-row justify-between items-center mb-4 pl-16 pr-24">
+				<div className="flex justify-between items-center flex-wrap-reverse mb-4 pl-16 pr-24">
 					<div className="flex flex-col w-[500px] gap-6 ">
 						<div className="flex items-center gap-2 -translate-x-6 md:translate-x-0">
 							<img
