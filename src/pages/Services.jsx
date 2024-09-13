@@ -22,12 +22,12 @@ const Services = () => {
 						Drilling Fluid Measurement Unit
 					</h2>
 				</span>
-				<div className="flex flex-col xl:flex-row justify-between items-center flex-wrap mt-8 lg:mt-16 lg:pl-32 lg:pr-40 gap-4 lg:gap-0">
+				<div className="flex flex-col lg:flex-row justify-between items-center flex-wrap mt-8 lg:mt-16 lg:pl-32 lg:pr-40 gap-4 lg:gap-0">
 					<img
 						src={image1}
 						className="h-[400px] w-auto lg:translate-x-16"
 					/>
-					<div className="flex flex-col px-20 lg:w-[500px] gap-6">
+					<div className="flex flex-col px-20 lg:w-[600px] gap-6">
 						<p className="text-justify">
 							The Drilling Fluid Measurement Unit is an innovative
 							laboratory equipment streamlining the measurement of
@@ -46,7 +46,7 @@ const Services = () => {
 						</p>
 					</div>
 				</div>
-				<div className="flex justify-between items-center flex-wrap-reverse mb-4 pl-16 pr-24">
+				<div className="flex flex-col-reverse lg:flex-row justify-between items-center mb-4 pl-16 pr-24">
 					<div className="flex flex-col w-[500px] gap-6 ">
 						<div className="flex items-center gap-2 -translate-x-6 md:translate-x-0">
 							<img
@@ -75,7 +75,7 @@ const Services = () => {
 					</div>
 					<img
 						src={image2}
-						className="h-[350px] w-auto xl:-translate-x-28 mx-auto lg:mx-0"
+						className="h-[350px] w-auto xl:-translate-x-48 mx-auto lg:mx-0"
 					/>
 				</div>
 			</div>
