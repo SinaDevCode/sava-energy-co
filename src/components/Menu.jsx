@@ -57,18 +57,7 @@ const Menu = () => {
 						>
 							Products
 						</NavLink>
-						<NavLink
-							to="/LabEquipments"
-							className={({ isActive, isPending }) =>
-								isPending
-									? "pending"
-									: isActive
-									? "active"
-									: "menuDisable"
-							}
-						>
-							Lab Equipments
-						</NavLink>
+						<NavLink to="/LabEquipments">Lab Equipments</NavLink>
 						<NavLink
 							to="/Projects"
 							className={({ isActive, isPending }) =>

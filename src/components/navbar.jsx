@@ -17,7 +17,7 @@ const Navbar = () => {
 			>
 				Products
 			</NavLink>
-			<NavLink className={`Disable`}>Lab&nbsp;Equipments</NavLink>
+			<NavLink to="/LabEquipments">Lab&nbsp;Equipments</NavLink>
 			<NavLink
 				to="/Projects"
 				className="Disable"

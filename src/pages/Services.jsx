@@ -22,10 +22,10 @@ const Services = () => {
 						Drilling Fluid Measurement Unit
 					</h2>
 				</span>
-				<div className="flex justify-center items-center flex-wrap gap-48 mt-8 md:mt-16">
+				<div className="flex justify-between items-center flex-wrap mt-8 md:mt-16 pl-32 pr-40">
 					<img
 						src={image1}
-						className="h-[400px] w-auto translate-x-8"
+						className="h-[400px] w-auto translate-x-16"
 					/>
 					<div className="flex flex-col w-[500px] gap-6">
 						<p className="text-justify">
@@ -46,7 +46,7 @@ const Services = () => {
 						</p>
 					</div>
 				</div>
-				<div className="flex justify-center items-center flex-wrap-reverse mb-4 gap-48">
+				<div className="flex justify-between items-center flex-wrap-reverse mb-4 pl-16 pr-24">
 					<div className="flex flex-col w-[500px] gap-6 ">
 						<div className="flex items-center gap-2">
 							<img
@@ -57,7 +57,7 @@ const Services = () => {
 								Functions
 							</h2>
 						</div>
-						<span className="relative translate-x-8">
+						<span className="relative translate-x-16">
 							<ul className="text-justify text-Cyan font-medium circle">
 								Measurement of fluid rotational viscosity
 								(reading at 3, 6, 100, 200, 300, 600 rpm) and
@@ -65,7 +65,7 @@ const Services = () => {
 								temperature to 65C.
 							</ul>
 						</span>
-						<span className="relative translate-x-8">
+						<span className="relative translate-x-16">
 							<ul className="text-justify text-Cyan font-medium circle">
 								Fast calculation of initial cut, final cut, PV
 								(Plastic Viscosity), and YP (Yield Point)
@@ -75,7 +75,7 @@ const Services = () => {
 					</div>
 					<img
 						src={image2}
-						className="h-[400px] w-auto -translate-x-10"
+						className="h-[400px] w-auto -translate-x-28"
 					/>
 				</div>
 			</div>
@@ -90,7 +90,7 @@ const Services = () => {
 						Microchip Products
 					</h2>
 				</span>
-				<div className="flex md:gap-48 px-16 flex-wrap-reverse md:justify-start justify-center mt-8 md:mt-16">
+				<div className="flex md:gap-48 pl-16 flex-wrap-reverse md:justify-start justify-center mt-8 md:mt-16">
 					<div className="flex flex-col">
 						<table>
 							<thead>
@@ -210,17 +210,17 @@ const Services = () => {
 					</div>
 				</div>
 			</div>
-			<div className="px-8 my-8">
+			<div className="px-16 my-8 flex flex-col">
 				<div className="flex items-center gap-2 mt-8 mb-4 lg:mt-20">
 					<img
 						src={image4}
 						className="w-8"
 					/>
-					<h2 className="text-3xl font-medium lg:my-4">
+					<h2 className="text-3xl font-medium lg:my-4 text-Grey">
 						Features & Benefits
 					</h2>
 				</div>
-				<div className="flex lg:gap-[425px] flex-col lg:flex-row items-start gap-4">
+				<div className="flex justify-between px-5 lg:gap-[425px] flex-col lg:flex-row items-start gap-4">
 					<div className="flex flex-col md:pl-10 gap-2">
 						<ul className="disc">Ultra small size</ul>
 						<ul className="disc">MEMS Technology</ul>
@@ -234,7 +234,7 @@ const Services = () => {
 							No tool installation and maintenance
 						</ul>
 					</div>
-					<div className="flex flex-col">
+					<div className="flex flex-col -translate-x-16">
 						<ul className="feature">Innovative technology</ul>
 						<p className="mb-2 text-Cyan w-[400px]">
 							An innovative open platform to provide dynamic

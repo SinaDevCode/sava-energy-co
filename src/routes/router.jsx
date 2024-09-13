@@ -28,7 +28,7 @@ import DanaStarchLv from "../pages/panels/dana/danaStarchLv";
 const router = [
 	{ path: "/", element: <Home /> },
 	{ path: "/Login", element: <Login /> },
-	// { path: "/LabEquipments", element: <LabEquipments /> },
+	{ path: "/LabEquipments", element: <LabEquipments /> },
 	{ path: "/Services", element: <Services /> },
 	// ========== Sealand ==========
 	{ path: "/sealand", element: <SealandDashboard /> },

@@ -62,7 +62,7 @@ ul.disc::before {
     left: -1rem;
     transform: translate(-50%, -50%);
     content: '';
-    width: 0.5rem;
+    width: 0.75rem;
     aspect-ratio: 1;
     background-color: rgb(30, 189, 184);
     border-radius: 1.5rem;
