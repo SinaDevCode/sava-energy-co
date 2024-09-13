@@ -23,7 +23,8 @@ export default function LabEquipments() {
 		<>
 			<Header />
 
-			<div className="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-8 p-16">
+			{/* <div className="grid grid-cols-4 grid-rows-3 gap-x-4 gap-y-8 p-16 "> */}
+			<div className="flex flex-wrap md:justify-start justify-center w-full p-16 gap-x-4 gap-y-8">
 				<ProductsCard
 					imageURL={image2}
 					alt="VG Meter-FANN 35"
